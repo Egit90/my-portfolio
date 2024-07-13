@@ -1,4 +1,6 @@
+import { AiFillGithub, AiFillLinkedin, AiFillMail } from "react-icons/ai";
 import { ILanguages } from "./projects";
+import { SiReaddotcv } from "react-icons/si";
 
 export type IMALANG = { Name: ILanguages; ImageSrc: string };
 
@@ -79,4 +81,26 @@ export const INFO = {
     "NextJs",
   ],
   langs: MALANG,
+  Socials: [
+    {
+      Name: "LinkedIn",
+      Icon: AiFillLinkedin,
+      Link: "https://www.linkedin.com/in/elie-maatouk-b84891132/",
+    },
+    {
+      Name: "GitHub",
+      Icon: AiFillGithub,
+      Link: "https://github.com/Egit90",
+    },
+    {
+      Name: "Email",
+      Icon: AiFillMail,
+      Link: "mailto:elie90@gmail.com",
+    },
+    {
+      Name: "Resume",
+      Icon: SiReaddotcv,
+      Link: "https://drive.google.com/file/d/1ki4Wev9jTArGVtFhrWVsHV3DZ42IpJSv/view",
+    },
+  ],
 };

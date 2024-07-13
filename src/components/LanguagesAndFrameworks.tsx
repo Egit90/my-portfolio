@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const LanguagesAndFrameworks = () => {
   return (
-    <div className="flex flex-row md:flex-col h-full justify-between flex-wrap">
+    <div className="flex flex-row md:flex-col h-full justify-center md:justify-between flex-wrap">
       {INFO.langs.map((e, i) => (
         <Image
           alt={e.Name}
