@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Projects = ({ myProjects }: { myProjects: IProject[] }) => {
   return (
-    <div className="flex flex-col md:flex-row justify-center items-center mt-20">
+    <div className="flex flex-col md:flex-row justify-center items-center mt-20 md:justify-between">
       {myProjects.map((e, i) => (
         <MyCard Project={e} key={i} />
       ))}
@@ -26,10 +26,13 @@ const MyCard = ({ Project }: { Project: IProject }) => {
   });
 
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-lg  hover:bg-zinc-300">
-      <div className="flex flex-row justify-between p-10">
+    <div className="max-w-md h-96 overflow-hidden shadow-lg  hover:bg-zinc-300 rounded-lg">
+      <div className="flex flex-row items-center justify-between pt-7 px-7 bg-gradient-to-r from-slate-600">
         <div className="font-bold text-xl mb-2">{Project.ProjectName}</div>
-        <div className="flex flex-row gap-2">
+        <span className="inline-block bg-teal-400 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+          <Link href={Project.Demo}>Demo</Link>
+        </span>
+        <div className="flex flex-row gap-2 ">
           {projectLangsLogo.map((e, i) => (
             <Image
               key={i}
@@ -42,16 +45,12 @@ const MyCard = ({ Project }: { Project: IProject }) => {
           ))}
         </div>
       </div>
+      <div className="p-2"></div>
 
       <div className="px-6 py-4">
         <p className="text-gray-700 text-sm md:text-base">
           {Project.Description}
         </p>
-      </div>
-      <div className="px-6 pt-4 pb-2">
-        <span className="inline-block bg-teal-400 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-          <Link href={Project.Demo}>Demo</Link>
-        </span>
       </div>
     </div>
   );
