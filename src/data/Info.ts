@@ -100,7 +100,7 @@ export const INFO = {
     {
       Name: "Resume",
       Icon: SiReaddotcv,
-      Link: "https://drive.google.com/file/d/1ki4Wev9jTArGVtFhrWVsHV3DZ42IpJSv/view",
+      Link: "https://drive.google.com/file/d/17BDpyVpAT0L01d7_Du1k-Io8SbUFQMUA/view?usp=sharing",
     },
   ],
 };

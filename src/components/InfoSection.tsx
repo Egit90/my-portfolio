@@ -34,7 +34,7 @@ const InfoSection = () => {
 
         <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
           {INFO.Socials.map((e, i) => (
-            <Link key={i} href={e.Link} target="_blank">
+            <Link key={i} href={e.Link} target="_blank" contextMenu={e.Name}>
               <e.Icon />
             </Link>
           ))}

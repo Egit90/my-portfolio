@@ -3,6 +3,7 @@ import { Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import { INFO } from "@/data/Info";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const inter = Roboto_Mono({ subsets: ["latin"] });
 
@@ -24,6 +25,7 @@ export default function RootLayout({
           <MaxWidthWrapper>{children}</MaxWidthWrapper>
         </div>
       </body>
+      <GoogleTagManager gtmId="G-G6R7WWXXNB" />
     </html>
   );
 }
